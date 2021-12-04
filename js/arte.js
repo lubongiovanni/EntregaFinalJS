@@ -8,7 +8,7 @@ $.getJSON( URL_JSON, (response, status) => {
     }
     for ( const cuadro of response ) {
 
-        $('#galeria_fotos').prepend(`
+        $('.galeria_fotos').prepend(`
             <div class="pic ${ cuadro.clase }">
                 <img scr="${ cuadro.imagen }">
                 <h3> ${ cuadro.titulo } </h3>
