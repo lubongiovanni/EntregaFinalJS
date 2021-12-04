@@ -10,9 +10,8 @@ $.getJSON( URL_JSON, (response, status) => {
 
         $('.galeria_fotos').prepend(`
             <div class="pic ${ cuadro.clase }">
-                <img scr="${ cuadro.imagen }">
-                <h3> ${ cuadro.titulo } </h3>
-                <p> ${ cuadro.stock } </p>
+                <img src="${ cuadro.imagen }" alt="${ cuadro.titulo }">
+                <h6> ${ cuadro.stock } </h6>
             </div>
         `)
     }
