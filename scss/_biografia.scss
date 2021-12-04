@@ -1,0 +1,38 @@
+.contenedor-biografia {
+	margin: 5px;
+	padding: 5px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+
+	img {
+		min-width: 200px;
+		max-width: 350px;
+		width: 100%;
+		height: 100%;
+		max-height: 350px;
+		text-align: center;
+		border-radius: 10px;
+	}
+}
+
+.descripcion {
+	text-indent: 5px;
+	tab-size: 5px;
+	padding: 15px;
+	font-size: 1.2rem;
+	font-family: 'Cormorant Garamond', serif;
+
+}
+
+@media only screen and (max-width: 700px) {
+	.contenedor-biografia {
+		flex-direction: column;
+	}
+	.descripcion {
+		font-size: 1.1rem;
+	}
+
+}

@@ -1,0 +1,105 @@
+.contorno_form{
+	margin: 3px 10px;
+	padding: 10px 2%;
+	border-radius: 10px;
+	background-image: url("../img/bg_contacto.jpg"); 
+	background-size: cover;
+	border: 2px groove white;
+	h2 {
+		font-family: 'Lobster', cursiva;
+	}
+}
+
+#formulario{
+	display: grid;
+	grid-template-areas: 
+        "nombre introducirnombre"
+        "telefono introducirtelefono"
+		"email introduciremail"
+		/*
+		"eleccion introducireleccion"
+		"comentarios comentarios"
+		"introducircomentarios introducircomentarios"*/
+		"limpiar enviar"
+    ;
+	grid-template-rows: auto auto auto /*auto auto 50px*/ auto;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 5px; /*Entre Columnas dejar vacío*/
+    grid-row-gap: 5px; /*Entre Filas dejar vacío*/
+}
+
+form {
+	label {
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 18px;
+	}
+	input, select, textarea {
+		font-family: 'Barlow', sans-serif;
+		font-size: 14px;
+	}
+	#enviar, #limpiar{
+		font-family: 'Bilbo Swash Caps', cursive;
+		font-size: 20px;
+	}
+
+}
+
+label#nombre{
+	grid-area: nombre;
+}
+input#introducirnombre{
+	grid-area: introducirnombre;
+}
+label#telefono{
+	grid-area: telefono;
+}
+input#introducirtelefono{
+	grid-area: introducirtelefono;
+}
+label#email{
+	grid-area: email;
+}
+input#introduciremail{
+	grid-area: introduciremail;
+}
+/*
+label#eleccion{
+	grid-area: eleccion;
+}
+select#introducir{
+	grid-area: introducireleccion;
+}
+div#actualizaciones{
+	grid-area: actualizaciones;
+}
+input#introduciractualizaciones{
+	grid-area: introduciractualizaciones;
+	justify-self: start;
+}
+label#comentarios{
+	grid-area: comentarios;
+}
+textarea#introducircomentarios {
+	grid-area: introducircomentarios;
+}*/
+input#enviar{
+	grid-area: enviar; 
+}
+input#limpiar{
+	grid-area: limpiar; 
+}
+
+@media only screen and (max-width: 450px) {
+	#formulario{
+		grid-template-rows: 55px 55px 55px /*55px auto 55px*/ auto;
+		grid-template-columns: 30% 70%;
+		grid-column-gap: 5px; /*Entre Columnas dejar vacío*/
+		grid-row-gap: 5px; /*Entre Filas dejar vacío*/
+	}
+	form {
+		#enviar, #limpiar{
+			font-size: 18px;
+		}
+	}
+}
+

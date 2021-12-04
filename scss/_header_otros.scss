@@ -1,0 +1,27 @@
+.header_otros {
+    background-image: url("../img/fondo-index.jpg");
+    background-size: cover;
+    min-height: 180px;
+	margin: auto;
+	position: relative;
+	margin-bottom: 5px;
+
+    label {
+        display: none;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+}
+
+.menu-otros{
+    margin: 0 5%;
+    width: 90%;
+    height: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}

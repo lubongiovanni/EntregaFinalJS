@@ -1,0 +1,73 @@
+/* FOOTER */
+
+/* Línea divisoria */
+
+.línea-divisoria {
+    position: relative;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #eac199;
+}
+
+/* Pie de página */
+.piedepagina {
+    background-color: #fcf4f4;
+    text-align: center;
+    p {
+        font-family: 'Great Vibes', cursive;
+        font-size: 1.2rem;
+        color: rgb(48, 13, 13);
+        margin-bottom: 0.5%;
+        margin-top: 1%;
+        a {
+            text-decoration: none;
+            color: darkgray;
+        }
+
+    }
+}
+
+.contactame {
+    height: auto;
+    margin-bottom: 2px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2em;
+    color: rgb(82, 24, 24);
+
+}
+
+.footer {
+    display: inline-block;
+    a {
+        padding: 5px 12px;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 100%;
+        /* Convertimos los elementos a en elementos bloque para manipular el padding */
+        color: rgb(42, 40, 40);
+        &:hover {        
+            .bi {
+                transform: scale(1.8,1.8);
+                transition: .9s;
+            }
+            .bi-instagram {
+                color: #bf209c;
+            }
+            .bi-facebook {
+                color: #3b5998;
+            }
+            .bi-whatsapp {
+                color: #25D366;
+            }
+            .bi-envelope {
+                color: #C30907;
+            }
+        }
+    }    
+}
+
+
+
+
+
+/* FIN FOOTER */

@@ -1,0 +1,44 @@
+// Colocar Imágenes en el cuerpo del HTML
+const URL_JSON = "json/cuadros.json"
+
+$.getJSON( URL_JSON, (response, status) => {
+
+    if ( status !== 'success') {
+        throw new Error('error')
+    }
+    for ( const cuadro of response ) {
+
+        $('#galeria_fotos').prepend(`
+            <div class="pic ${ cuadro.clase }">
+                <img scr="${ cuadro.imagen }">
+                <h3> ${ cuadro.titulo } </h3>
+                <p> ${ cuadro.stock } </p>
+            </div>
+        `)
+    }
+})
+
+//JS que se oculte y vuelva a aparecer el título general
+$( ".titulo_galeria" ).mouseover ( () => {
+    $( "h1" ).animate({
+        opacity: 0.25,
+        height: "toggle"
+    }, 2000, function() {
+      // Animación completa
+    });
+});
+
+$( ".titulo_galeria" ).mouseout( () => {
+    $( "h1" ).animate({
+        opacity: 1,
+        display: "flex",
+    }, 2000, function() {
+      // Animación completa
+    });
+});
+
+$('.contenedor_cuadros').prepend(`
+    <h3 class="nuevo_titulo"> Maricel Peruchini </h3>
+`)
+
+
